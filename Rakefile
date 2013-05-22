@@ -29,9 +29,9 @@ namespace :install do
   end
 
   task :done do
-    if system("curl -k https://localhost:3131 &> /dev/null")
+    if system("curl -k https://localhost:4141 &> /dev/null")
       puts "\e[1m\e[32mdotjs installation worked\e[0m"
-      puts "open https://localhost:3131 in chrome to enable ssl"
+      puts "open https://localhost:4141 in chrome to enable ssl"
       puts "then drop files like google.com.js in ~/.js and enjoy hacking the web"
     else
       puts "\e[31mdotjs installation failed\e[0m"
@@ -106,7 +106,7 @@ namespace :uninstall do
   end
 
   task :done do
-    if system("curl http://localhost:3131 &> /dev/null")
+    if system("curl http://localhost:4141 &> /dev/null")
       puts "\e[31mdotjs uninstall failed\e[0m"
       puts "djsd is still running"
     else
